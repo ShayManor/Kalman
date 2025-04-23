@@ -1,7 +1,7 @@
 # Kalman-Filter-PYTHON-Functions
 # Influence Diagram Implementation of Discrete-Time Filtering
 This program is based on using normal influence diagrams as described in Kenley's doctoral dissertation (Kenley, Chapter 2) to perform optimal filtering and prediction for linear multistage processes according to the process model from Bryson and Ho’s book. (Bryson and Ho, 360)  The context and purpose for this application is summarized by Bryson and Ho:
-
+Visual Diagram Here: https://kalman.app/
 > In practice, the individual state variables cannot be determined exactly by direct measurements; instead, we usually find that the measurements that can be made are functions of
 > the state variables and that these measurements contain random errors. The system itself may also be subjected to random disturbances. In many cases, we have too few
 > measurements at a given time to infer the state variables at that time, even if the measurements were quite precise. On occasion, we have more than enough measurements, so that
