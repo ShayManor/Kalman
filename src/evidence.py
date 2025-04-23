@@ -1,7 +1,7 @@
 import numpy as np
 
-from src.KalmanFilter.cov_to_inf import get_Kalman
-from src.KalmanFilter.reversal import reversal
+from src.cov_to_inf import get_Kalman
+from src.reversal import reversal
 
 
 def evidence(u, B, V, X1, n0, n1, n2, du):

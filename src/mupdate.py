@@ -1,7 +1,7 @@
 import numpy as np
 
-from src.KalmanFilter.cov_to_inf import cov_to_inf
-from src.KalmanFilter.evidence import evidence
+from src.cov_to_inf import cov_to_inf
+from src.evidence import evidence
 
 
 def mupdate(k, Z, u, B_or_sigma, V, R, H, h=None):

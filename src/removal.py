@@ -1,6 +1,6 @@
 import numpy as np
 
-from src.KalmanFilter.reversal import reversal
+from src.reversal import reversal
 
 
 def removal(B, V, n0, n1, n2):

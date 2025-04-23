@@ -38,14 +38,13 @@ authors = [
     { name = "Zirui Zhang", email = "zhan4192@purdue.edu" },
     { name = "Yixin Hu", email = "hi969@purdue.edu" }
 ]
-license = { file = "LICENSE.txt" }
 requires-python = ">=3.7"
 dependencies = [
     "numpy"
 ]
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT",
     "Operating System :: OS Independent"
 ]
 keywords = ["kalman", "kalman-filter", "filter", "filtering", "influence diagram"]

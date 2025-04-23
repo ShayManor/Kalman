@@ -1,8 +1,6 @@
-import numpy as np
-
-from src.KalmanFilter.inf_to_cov import inf_to_cov
-from src.KalmanFilter.mupdate import mupdate
-from src.KalmanFilter.tupdate import tupdate
+from src.inf_to_cov import inf_to_cov
+from src.mupdate import mupdate
+from src.tupdate import tupdate
 
 
 class trackingKF:

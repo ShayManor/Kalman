@@ -1,8 +1,8 @@
 import numpy as np
 
-from src.KalmanFilter.cov_to_inf import cov_to_inf
-from src.KalmanFilter.inf_to_cov import inf_to_cov
-from src.KalmanFilter.tupdate import tupdate
+from src.cov_to_inf import cov_to_inf
+from src.inf_to_cov import inf_to_cov
+from src.tupdate import tupdate
 
 
 def id_predict(filter):

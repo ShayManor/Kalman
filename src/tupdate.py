@@ -1,7 +1,7 @@
 import numpy as np
 
-from src.KalmanFilter.cov_to_inf import cov_to_inf
-from src.KalmanFilter.removal import removal
+from src.cov_to_inf import cov_to_inf
+from src.removal import removal
 
 
 def tupdate(u, B, V, Phi, gamma, Qk):
