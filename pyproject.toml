@@ -35,7 +35,8 @@ authors = [
     { name = "Shay Manor", email = "manors@purdue.edu" },
     { name = "Robert Kenley", email = "kenley@purdue.edu" },
     { name = "Priyank Behera", email = "beherap@purdue.edu" },
-    { name = "Zirui Zhang", email = "zhan4192@purdue.edu" }
+    { name = "Zirui Zhang", email = "zhan4192@purdue.edu" },
+    { name = "Yixin Hu", email = "hi969@purdue.edu" }
 ]
 license = { file = "LICENSE.txt" }
 requires-python = ">=3.7"
