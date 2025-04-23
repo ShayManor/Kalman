@@ -1,0 +1,50 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyKalmanFilter"
+version = "0.1.1"
+description = """
+This package provides a Python-based implementation of a discrete-time filtering framework using influence diagrams. It offers functions to convert between the standard covariance (matrix) representation of Gaussian distributions and a strictly upper-triangular influence diagram (ID) form. In ID form, matrix B holds arc coefficients, while vector V holds conditional variances (including infinite values for certain unconditional nodes). By leveraging influence diagrams, the package performs measurement updates, time updates, and evidence assimilation in a stepwise, Bayesian manner.
+
+Key Functions and Their Purpose:
+
+• cov_to_inf(X, domain): Converts a covariance matrix X into an influence diagram representation (B, V), enabling specialized Bayesian operations like arc reversal and node removal.
+• inf_to_cov(V, B, domain): Reconstructs the covariance matrix from the ID representation. Useful whenever final outputs must be in standard covariance form.
+• reversal(B, V, n0, n1, n2, n3): Implements arc reversal between nodes, applying a Bayesian update to reorient dependencies in the ID. This is analogous to calculating a Kalman gain in a typical measurement update.
+• evidence(u, B, V, X1, n0, n1, n2, du): Integrates observed values (e.g., measurements) by instantiating evidence in the ID. This function performs the required node reversals and adjusts the state estimates and their variances accordingly.
+• removal(B, V, n0, n1, n2): Marginalizes out (removes) selected nodes from the ID, folding their effects into remaining nodes. This step is crucial for time-propagating states or eliminating noise variables once their effects have been captured.
+• mupdate(...): Provides a measurement update routine that moves from covariance form to ID form, incorporates new measurements, and returns updated forms.
+• tupdate(...): Manages the time update by propagating the state forward through the process model, again leveraging the ID representation to incorporate or remove noise.
+• kalman(...): Offers an end-to-end Kalman filter procedure that runs measurement update and time update. It can output either in ID form or revert to covariance form as needed.
+
+Workflow Overview:
+1. Start with a system state (mean and covariance) or its ID equivalent.
+2. Use cov_to_inf to switch from covariance form into ID form if not already in that representation.
+3. Run mupdate (or evidence/reversal steps directly) to assimilate new measurements.
+4. Convert back to covariance form with inf_to_cov whenever you need a traditional covariance matrix for further processing.
+5. Use tupdate to advance the system through time, removing old states and noise variables in the ID with removal.
+
+By systematically handling Bayesian operations (node removal, arc reversal, evidence setting), this package demonstrates how linear Gaussian filtering can be carried out through influence diagrams. The Python functions can be directly adapted or mapped to similar workflows in other environments, allowing a transparent and flexible approach to discrete-time estimation without relying solely on matrix formulas.
+"""
+authors = [
+    { name = "Shay Manor", email = "manors@purdue.edu" },
+    { name = "Robert Kenley", email = "kenley@purdue.edu" },
+    { name = "Priyank Behera", email = "beherap@purdue.edu" },
+    { name = "Zirui Zhang", email = "zhan4192@purdue.edu" }
+]
+license = { file = "LICENSE.txt" }
+requires-python = ">=3.7"
+dependencies = [
+    "numpy"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT",
+    "Operating System :: OS Independent"
+]
+keywords = ["kalman", "kalman-filter", "filter", "filtering", "influence diagram"]
