@@ -16,6 +16,8 @@ authors = [
     { name = "Zirui Zhang", email = "zhan4192@purdue.edu" },
     { name = "Yixin Hu", email = "hi969@purdue.edu" }
 ]
+readme = "README.md"
+readme-content-type = "text/markdown"
 requires-python = ">=3.7"
 dependencies = [
     "numpy"
